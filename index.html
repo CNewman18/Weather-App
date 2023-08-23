@@ -1,1 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <title>Weather</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-2">Lisbon</div>
+            <div class="col-2">Paris</div>
+            <div class="col-2">Sydney</div>
+            <div class="col-2">Houston</div>
+            <div class="col-4 popular-search">popular searches</div>
+          </div>
+        </div>
+        <hr />
+        <form class="search-bar" id="search-form">
+          <input
+            type="text"
+            id="search-text-input"
+            placeholder="Enter your city"
+          />
+          <input type="Submit" label="search" value="Search" />
+          <button type="Submit" value="Current" id="current-city-button  ">
+            Current City
+          </button>
+        </form>
+        <hr />
+        <div class="row">
+          <div class="col-6 location-time">
+            <h1 id="current-city"></h1>
+            <h3 id="date-time"></h3>
+            <h4 class="current-weather">⛅ <span id="degree-value"></span>°</h4>
+          </div>
 
+          <div class="col-6 rain-wind">
+            <span class="description" id="description"> Partly Cloudy </span
+            ><br />
+            Humidity: <span id="humidity"></span>% <br />
+            Wind: <span id="wind"></span> km/h
+            <div class="celsius-farenheit">
+              <a href="#" id="celsius-link">°C</a> |
+              <a href="#" id="farenheit-link">°F</a>
+            </div>
+          </div>
+        </div>
+        <div class="card day-weather">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-1"></div>
+              <div class="col-2">
+                Mon <br />
+                <span class="day-emoji">☀️</span>
+              </div>
+              <div class="col-2">
+                Tues <br /><span class="day-emoji">☀️</span>
+              </div>
+              <div class="col-2">
+                Weds<br /><span class="day-emoji">☀️</span>
+              </div>
+              <div class="col-2">
+                Thurs<br /><span class="day-emoji">☀️</span>
+              </div>
+              <div class="col-2">
+                Fri<br /><span class="day-emoji">☀️</span>
+              </div>
+              <div class="col-1"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>Coded with 💖 by Charlie Newman</footer>
+    <script src="src/index.js"></script>
+  </body>
+</html>
